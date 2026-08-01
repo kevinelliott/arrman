@@ -2,6 +2,18 @@
 
 All notable changes to Arrman are documented here.
 
+## [1.0.1] - 2026-07-31
+
+### Security
+
+- Upgraded Ratatui to 0.30 and aligned Crossterm to 0.29 so Ratatui's transitive
+  `lru` dependency is on the patched release line, addressing
+  `RUSTSEC-2026-0002` without bundling unrelated major dependency updates.
+
+### Changed
+
+- Removed a styling-trait import made redundant by Ratatui 0.30.
+
 ## [1.0.0] - 2026-07-31
 
 ### Added
@@ -21,4 +33,5 @@ All notable changes to Arrman are documented here.
 - Static Linux release builds, multi-architecture GHCR images, Docker Compose
   deployment support, CI, release automation, provenance, and SBOM generation.
 
+[1.0.1]: https://github.com/kevinelliott/arrman/releases/tag/v1.0.1
 [1.0.0]: https://github.com/kevinelliott/arrman/releases/tag/v1.0.0

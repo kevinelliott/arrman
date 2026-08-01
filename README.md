@@ -96,7 +96,7 @@ Download the architecture-matched binary and checksum from the
 [latest release](https://github.com/kevinelliott/arrman/releases/latest):
 
 ```sh
-arrman_version=v1.0.0
+arrman_version=v1.0.1
 curl -fLO "https://github.com/kevinelliott/arrman/releases/download/${arrman_version}/arrman-${arrman_version}-linux-x86_64"
 curl -fLO "https://github.com/kevinelliott/arrman/releases/download/${arrman_version}/SHA256SUMS"
 sha256sum --check --ignore-missing SHA256SUMS
