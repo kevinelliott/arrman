@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    name: Rust 1.88
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Rust toolchain
+        run: rustup toolchain install 1.88.0 --profile minimal --component clippy,rustfmt
+      - name: Check formatting
+        run: cargo +1.88.0 fmt --all -- --check
+      - name: Check web JavaScript
+        run: node --check src/web_assets/app.js
+      - name: Verify documentation catalog
+        run: node scripts/verify-docs.mjs
+      - name: Lint
+        run: cargo +1.88.0 clippy --locked --all-targets --all-features -- -D warnings
+      - name: Test
+        run: cargo +1.88.0 test --locked
+      - name: Build release binary
+        run: cargo +1.88.0 build --release --locked
+
+  container:
+    name: Container build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build image
+        run: docker build --build-arg VERSION=ci --tag arrman:ci .
+      - name: Verify embedded tooling
+        run: docker run --rm --entrypoint sh arrman:ci -c 'arrman --version && docker compose version'

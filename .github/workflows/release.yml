@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.asset }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-musl
+            asset: linux-x86_64
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-musl
+            asset: linux-aarch64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Rust and musl tooling
+        run: |
+          rustup toolchain install 1.88.0 --profile minimal
+          rustup target add --toolchain 1.88.0 ${{ matrix.target }}
+          sudo apt-get update
+          sudo apt-get install --yes musl-tools
+      - name: Build static binary
+        run: cargo +1.88.0 build --release --locked --target ${{ matrix.target }}
+      - name: Stage release asset
+        run: |
+          mkdir -p dist
+          install -m 0755 target/${{ matrix.target }}/release/arrman dist/arrman-${{ github.ref_name }}-${{ matrix.asset }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: arrman-${{ matrix.asset }}
+          path: dist/*
+          if-no-files-found: error
+
+  release:
+    name: Publish GitHub release
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: arrman-*
+          path: dist
+          merge-multiple: true
+      - name: Create checksums
+        working-directory: dist
+        run: sha256sum arrman-* > SHA256SUMS
+      - name: Publish release
+        uses: softprops/action-gh-release@v3
+        with:
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            dist/arrman-*
+            dist/SHA256SUMS
