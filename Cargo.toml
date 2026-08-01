@@ -37,7 +37,7 @@ crossterm = "0.29"
 flate2 = "1.1"
 fs2 = "0.4"
 futures-util = "0.3"
-rand = "0.9"
+rand = "0.10"
 ratatui = { version = "0.30", default-features = false, features = ["crossterm", "layout-cache"] }
 regex = "1.11"
 serde = { version = "1.0", features = ["derive"] }
