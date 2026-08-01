@@ -1,0 +1,42 @@
+name: arrman
+
+services:
+  arrman:
+    image: ghcr.io/kevinelliott/arrman:${ARRMAN_VERSION:-latest}
+    build:
+      context: .
+      args:
+        VERSION: ${ARRMAN_VERSION:-dev}
+    restart: unless-stopped
+    command:
+      - --web-only
+      - --web-bind
+      - 0.0.0.0:9876
+      - --compose-file
+      - ${MEDIA_STACK_DIR:?set MEDIA_STACK_DIR}/${MEDIA_COMPOSE_FILE:-docker-compose.yml}
+      - --backup-dir
+      - /backups
+    environment:
+      MEDIA_SERVER_HOST: ${MEDIA_SERVER_HOST:-localhost}
+    ports:
+      - 127.0.0.1:${ARRMAN_WEB_PORT:-9876}:9876
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${MEDIA_STACK_DIR:?set MEDIA_STACK_DIR}:${MEDIA_STACK_DIR:?set MEDIA_STACK_DIR}
+      - ${MEDIA_STATE_ROOT:?set MEDIA_STATE_ROOT}:${MEDIA_STATE_ROOT:?set MEDIA_STATE_ROOT}
+      - ${ARRMAN_BACKUP_DIR:?set ARRMAN_BACKUP_DIR}:/backups
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    networks:
+      - media-stack
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:9876/api/meta"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+networks:
+  media-stack:
+    external: true
+    name: ${MEDIA_DOCKER_NETWORK:?set MEDIA_DOCKER_NETWORK}
