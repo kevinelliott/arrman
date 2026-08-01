@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070e14">
+  <title>Arrman · Media Stack Watch</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <!-- THESIS: One browser watch surface joins live Compose intent, Docker state, protected operations, integrations, and recoverable setup bundles. OWN-WORLD: Ink-dark instrument fields, steel rules, sea-glass focus, explicit state words, square geometry, and a persistent shared command channel. STORY: Authenticate, read host condition, select a service, inspect its interlocks, act with exact scope, and follow the result without losing place. FIRST VIEWPORT: Host and command rail above the fleet ledger and selected service workbench, with the shared event strip anchored below. FORM: Sectional Engineering Watch station, grounded direction 3, seed 790992d1. FINISH: unreviewed and undocumented is unfinished; this surface ends with responsive screenshots, a finish verdict, and reconciled DESIGN.md guidance. -->
+  <a class="skip-link" href="#main-content">Skip to watch controls</a>
+
+  <svg class="icon-definitions" aria-hidden="true">
+    <symbol id="icon-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6"></rect><rect x="3" y="14" width="18" height="6"></rect><path d="M7 7h.01M7 17h.01M11 7h7M11 17h7"></path></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path></symbol>
+    <symbol id="icon-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.5-7 5 14 2.5-7h4"></path></symbol>
+    <symbol id="icon-archive" viewBox="0 0 24 24"><path d="M4 7h16v14H4zM3 3h18v4H3zM9 11h6"></path></symbol>
+    <symbol id="icon-terminal" viewBox="0 0 24 24"><path d="m4 6 6 6-6 6M12 18h8"></path></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"></path></symbol>
+    <symbol id="icon-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"></rect></symbol>
+    <symbol id="icon-restart" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M6.1 9A7 7 0 0 1 18 6l2 2M17.9 15A7 7 0 0 1 6 18l-2-2"></path></symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="m4 20 4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10zM14 7l3 3"></path></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4 10 14"></path><path d="M18 13v7H4V6h7"></path></symbol>
+    <symbol id="icon-scan" viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"></path><path d="M7 12h10"></path></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v13M7 11l5 5 5-5M4 21h16"></path></symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 17V4M7 9l5-5 5 5M4 21h16"></path></symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 3h6l1 4H8zM7 7l1 14h8l1-14M10 11v6M14 11v6"></path></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"></path><circle cx="12" cy="12" r="2.5"></circle></symbol>
+  </svg>
+
+  <section class="auth-gate" id="auth-gate" aria-labelledby="auth-title">
+    <div class="auth-instrument">
+      <div class="brand-lockup">
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-server"></use></svg>
+        <div>
+          <p class="product-name">ARRMAN</p>
+          <p class="product-mode">ENGINEERING WATCH · WEB</p>
+        </div>
+      </div>
+      <h1 id="auth-title">Open the private watch channel</h1>
+      <p class="auth-copy">This control room can change Docker, Compose, integrations, and private service configuration. Enter the bearer token stored on the server.</p>
+      <form id="auth-form" class="auth-form">
+        <label for="token-input">Web access token</label>
+        <div class="token-field">
+          <input id="token-input" name="token" type="password" autocomplete="current-password" spellcheck="false" required minlength="32">
+          <button class="icon-button" id="toggle-token" type="button" aria-label="Show token"><svg aria-hidden="true"><use href="#icon-eye"></use></svg></button>
+        </div>
+        <button class="button button-primary" type="submit">Open watch</button>
+      </form>
+      <p class="token-hint" id="token-hint">Loading token location…</p>
+      <p class="form-error" id="auth-error" role="alert"></p>
+    </div>
+  </section>
+
+  <div class="app-shell" id="app-shell" hidden>
+    <header class="watch-rail">
+      <div class="rail-primary">
+        <div class="brand-lockup compact">
+          <svg class="brand-mark" aria-hidden="true"><use href="#icon-server"></use></svg>
+          <div>
+            <p class="product-name">ARRMAN</p>
+            <p class="product-mode">ENGINEERING WATCH</p>
+          </div>
+        </div>
+        <div class="watch-identity">
+          <span class="connection-state wait" id="connection-state">[CONNECTING]</span>
+          <span id="host-identity">Awaiting host state</span>
+          <span class="sample-age" id="sample-age">pending</span>
+        </div>
+        <button class="button button-quiet session-exit" id="lock-session" type="button">Lock</button>
+      </div>
+
+      <dl class="host-metrics" aria-label="Host condition">
+        <div><dt>IP</dt><dd id="metric-ip">pending</dd></div>
+        <div><dt>CPU</dt><dd id="metric-cpu">pending</dd></div>
+        <div><dt>LOAD</dt><dd id="metric-load">pending</dd></div>
+        <div><dt>MEM</dt><dd id="metric-memory">pending</dd></div>
+        <div id="disk-metric"><dt>DISK</dt><dd id="metric-disk">pending</dd></div>
+        <div><dt>UP</dt><dd id="metric-uptime">pending</dd></div>
+      </dl>
+
+      <nav class="watch-tabs" aria-label="Control room sections">
+        <button class="tab-button active" type="button" data-view="fleet" aria-current="page"><svg aria-hidden="true"><use href="#icon-grid"></use></svg><span>Fleet</span><kbd>1</kbd></button>
+        <button class="tab-button" type="button" data-view="integrations"><svg aria-hidden="true"><use href="#icon-link"></use></svg><span>Integrations</span><kbd>2</kbd></button>
+        <button class="tab-button" type="button" data-view="diagnostics"><svg aria-hidden="true"><use href="#icon-pulse"></use></svg><span>Diagnostics</span><kbd>3</kbd></button>
+        <button class="tab-button" type="button" data-view="backups"><svg aria-hidden="true"><use href="#icon-archive"></use></svg><span>Setup &amp; backups</span><kbd>4</kbd></button>
+        <button class="tab-button" type="button" data-view="activity"><svg aria-hidden="true"><use href="#icon-terminal"></use></svg><span>Activity</span><kbd>5</kbd></button>
+      </nav>
+
+      <div class="operation-rail" id="operation-rail" aria-live="polite">
+        <span class="operation-signal">[IDLE]</span>
+        <span class="operation-label">No protected operation is active</span>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="view active" id="view-fleet" data-view-panel="fleet" aria-labelledby="fleet-title">
+        <div class="watch-layout">
+          <section class="fleet-ledger" aria-labelledby="fleet-title">
+            <div class="section-heading">
+              <div>
+                <h1 id="fleet-title">Service watch</h1>
+                <p id="fleet-summary">Loading Compose and Docker state…</p>
+              </div>
+              <label class="search-field" for="service-search">
+                <svg aria-hidden="true"><use href="#icon-search"></use></svg>
+                <span class="visually-hidden">Filter services</span>
+                <input id="service-search" type="search" placeholder="Filter service, purpose, state" autocomplete="off">
+                <kbd>/</kbd>
+              </label>
+            </div>
+            <div class="state-tally" id="state-tally" aria-label="Service state totals"></div>
+            <div class="ledger-scroll" tabindex="0" aria-label="Managed services table">
+              <table class="service-table">
+                <thead><tr><th scope="col">State</th><th scope="col">Service</th><th scope="col" class="purpose-column">Purpose</th><th scope="col" class="endpoint-column">Endpoint</th><th scope="col"><span class="visually-hidden">Open</span></th></tr></thead>
+                <tbody id="service-rows"><tr><td colspan="5" class="empty-cell">Waiting for the first live sample…</td></tr></tbody>
+              </table>
+            </div>
+          </section>
+
+          <aside class="service-workbench" id="service-workbench" aria-labelledby="selected-service-name">
+            <div class="workbench-empty" id="workbench-empty">
+              <span class="empty-signal">[NO SELECTION]</span>
+              <h2>Select a service to open its workbench</h2>
+              <p>Runtime state, dependency interlocks, ports, mounts, health checks, diagnostics, and protected actions remain together here.</p>
+            </div>
+            <div id="workbench-content" hidden>
+              <div class="workbench-heading">
+                <div>
+                  <span class="state-badge off" id="selected-service-state">[OFF]</span>
+                  <h2 id="selected-service-name">No selection</h2>
+                  <p id="selected-service-purpose">Choose a service from the ledger.</p>
+                </div>
+                <a class="icon-button external-link" id="selected-service-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open service"><svg aria-hidden="true"><use href="#icon-external"></use></svg></a>
+              </div>
+
+              <div class="action-bank" aria-label="Selected service actions">
+                <button class="button button-primary" id="action-enable" type="button"><svg aria-hidden="true"><use href="#icon-play"></use></svg>Enable</button>
+                <button class="button button-danger" id="action-disable" type="button"><svg aria-hidden="true"><use href="#icon-stop"></use></svg>Disable</button>
+                <button class="button" id="action-restart" type="button"><svg aria-hidden="true"><use href="#icon-restart"></use></svg>Restart</button>
+                <button class="button" id="action-diagnose" type="button"><svg aria-hidden="true"><use href="#icon-scan"></use></svg>Inspect logs</button>
+              </div>
+
+              <dl class="config-readout" id="config-readout"></dl>
+
+              <section class="port-bench" aria-labelledby="ports-heading">
+                <div class="minor-heading"><h3 id="ports-heading">Published ports</h3><span>Validated before recreation</span></div>
+                <div id="port-list" class="port-list"></div>
+              </section>
+
+              <section class="interlock-bench" aria-labelledby="interlocks-heading">
+                <div class="minor-heading"><h3 id="interlocks-heading">Dependency interlocks</h3><span id="interlock-state">pending</span></div>
+                <div id="dependency-list" class="dependency-list"></div>
+              </section>
+
+              <section class="diagnosis-compact" id="diagnosis-compact" aria-labelledby="diagnosis-compact-title" hidden>
+                <div class="minor-heading"><h3 id="diagnosis-compact-title">Latest log finding</h3><button class="text-button" type="button" data-open-view="diagnostics">Open full inspector</button></div>
+                <div id="diagnosis-compact-body"></div>
+              </section>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-integrations" data-view-panel="integrations" aria-labelledby="integrations-title" hidden>
+        <div class="section-heading full">
+          <div><h1 id="integrations-title">Integration interlocks</h1><p>Desired links are recalculated from enabled services and current ports. Secret fields never enter this page.</p></div>
+          <div class="heading-actions"><button class="button" id="refresh-integrations" type="button">Recalculate</button><button class="button button-primary" id="apply-integrations" type="button">Review &amp; apply</button></div>
+        </div>
+        <div class="integration-ledger" id="integration-ledger"><p class="empty-state">Open this section to calculate the current integration plan.</p></div>
+      </section>
+
+      <section class="view" id="view-diagnostics" data-view-panel="diagnostics" aria-labelledby="diagnostics-title" hidden>
+        <div class="section-heading full">
+          <div><h1 id="diagnostics-title">Log inspector</h1><p>Known failure signatures are evidence, not guesses. Automatic fixes are offered only when bounded and reversible.</p></div>
+          <button class="button" id="scan-fleet" type="button"><svg aria-hidden="true"><use href="#icon-scan"></use></svg>Scan fleet</button>
+        </div>
+        <div class="diagnostic-surface" id="diagnostic-surface"><p class="empty-state">Select a service in Fleet and inspect its logs, or scan every created container.</p></div>
+      </section>
+
+      <section class="view" id="view-backups" data-view-panel="backups" aria-labelledby="backups-title" hidden>
+        <div class="section-heading full">
+          <div><h1 id="backups-title">Setup &amp; recovery watch</h1><p>Private configuration bundles include Compose intent and service state, while media libraries, downloads, caches, logs, devices, and nested backups remain excluded.</p></div>
+          <button class="button button-primary" id="create-backup" type="button"><svg aria-hidden="true"><use href="#icon-archive"></use></svg>Create setup bundle</button>
+        </div>
+        <div class="backup-policy" id="backup-policy">Loading backup policy…</div>
+        <div class="recovery-layout">
+          <section class="bundle-ledger" aria-labelledby="bundle-ledger-title">
+            <div class="minor-heading"><h2 id="bundle-ledger-title">Retained bundles</h2><button class="text-button" id="refresh-backups" type="button">Refresh catalog</button></div>
+            <div id="backup-list"><p class="empty-state">Loading retained bundles…</p></div>
+          </section>
+          <section class="restore-bench" aria-labelledby="restore-title">
+            <h2 id="restore-title">Inspect a setup source</h2>
+            <p>Inspection is read-only. Restore remains locked until the manifest, exclusions, checksum, and warnings are visible.</p>
+            <form id="upload-form" class="source-form">
+              <label for="bundle-file">Local setup file</label>
+              <input id="bundle-file" name="bundle" type="file" accept=".gz,.tgz,application/gzip,application/x-gzip">
+              <button class="button" type="submit"><svg aria-hidden="true"><use href="#icon-upload"></use></svg>Upload &amp; inspect</button>
+            </form>
+            <div class="source-separator"><span>OR</span></div>
+            <form id="url-form" class="source-form">
+              <label for="bundle-url">HTTPS setup URL</label>
+              <input id="bundle-url" name="url" type="url" inputmode="url" placeholder="https://trusted.example/setup.tar.gz" required>
+              <button class="button" type="submit"><svg aria-hidden="true"><use href="#icon-link"></use></svg>Fetch &amp; inspect</button>
+            </form>
+            <div class="restore-inspection" id="restore-inspection" hidden></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-activity" data-view-panel="activity" aria-labelledby="activity-title" hidden>
+        <div class="section-heading full">
+          <div><h1 id="activity-title">Shared command channel</h1><p>TUI, web, scheduler, Docker, integration, backup, and restore progress converge here without exposing stored secrets.</p></div>
+          <button class="button" id="clear-activity" type="button">Clear local view</button>
+        </div>
+        <ol class="activity-ledger full-log" id="activity-full" aria-live="polite"></ol>
+      </section>
+    </main>
+
+    <aside class="activity-strip" aria-labelledby="activity-strip-title">
+      <div class="activity-strip-heading"><h2 id="activity-strip-title">Watch log</h2><button class="text-button" type="button" data-open-view="activity">Open channel</button></div>
+      <ol class="activity-ledger" id="activity-strip-list" aria-live="polite"><li class="empty-log">Waiting for shared activity…</li></ol>
+    </aside>
+
+    <footer class="command-footer">
+      <span id="footer-status">Authenticated · waiting for live state</span>
+      <span class="keyboard-hints"><kbd>1–5</kbd> sections <kbd>/</kbd> filter <kbd>↑↓</kbd> select <kbd>Enter</kbd> inspect</span>
+    </footer>
+  </div>
+
+  <dialog class="confirm-dialog" id="confirm-dialog" aria-labelledby="confirm-title">
+    <form method="dialog" id="confirm-form">
+      <div class="dialog-heading"><span class="dialog-signal" id="confirm-signal">[CONFIRM]</span><button class="icon-button" value="cancel" aria-label="Cancel"><svg aria-hidden="true"><use href="#icon-close"></use></svg></button></div>
+      <h2 id="confirm-title">Confirm operation</h2>
+      <div id="confirm-detail" class="confirm-detail"></div>
+      <label class="phrase-field" id="confirm-phrase-field" for="confirm-phrase" hidden><span id="confirm-phrase-label">Confirmation phrase</span><input id="confirm-phrase" autocomplete="off" spellcheck="false"></label>
+      <div class="dialog-actions"><button class="button" value="cancel">Cancel</button><button class="button button-primary" id="confirm-submit" value="confirm">Confirm</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast-rack" id="toast-rack" aria-live="assertive" aria-atomic="true"></div>
+</body>
+</html>

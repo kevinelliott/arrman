@@ -1,0 +1,19 @@
+/target/
+/__pycache__/
+.DS_Store
+
+# Private installation state and the pre-Rust implementation.
+/docker-compose.yml
+/docker-services.py
+/.claude/
+/.codex/
+/.cursor/
+/.impeccable/
+.env
+.env.*
+!.env.example
+.docker-services-*
+*.tar.gz
+
+# Generated release output.
+/dist/
