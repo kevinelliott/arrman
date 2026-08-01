@@ -1,0 +1,58 @@
+name: Service support request
+description: Propose first-class metadata, dependencies, diagnostics, or integrations for a media service.
+title: "service: "
+labels: [service-support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand Arrman. Do not paste real API keys, passwords, tokens, private URLs, or an unsanitized Compose file.
+  - type: input
+    id: service
+    attributes:
+      label: Service name
+      placeholder: examplearr
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream repository
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+  - type: input
+    id: image
+    attributes:
+      label: Maintained container image
+      placeholder: ghcr.io/owner/project:latest
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and desired support
+      description: Explain whether you need catalog metadata, dependency ownership, health interpretation, diagnostics, or integration automation.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and health check
+      description: Link to primary documentation for database/cache/worker requirements, startup conditions, internal ports, and health endpoints.
+    validations:
+      required: true
+  - type: textarea
+    id: integration
+    attributes:
+      label: Integration API
+      description: If applicable, link to API documentation and describe a safe read/compare/update flow. Use placeholders only.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, personal paths, private addresses, and provider account data.
+          required: true
+        - label: I linked primary upstream documentation for the requested behavior.
+          required: true

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="622" viewBox="0 0 1000 622" role="img" aria-labelledby="title desc">
+  <title id="title">Arrman terminal engineering watch</title>
+  <desc id="desc">Deterministic demo snapshot of the Arrman TUI showing host statistics, sixteen media services, dependency state, and live command activity.</desc>
+  <rect width="1000" height="100%" rx="12" fill="#070e14"/>
+  <rect x="1" y="1" width="998" height="620" rx="11" fill="none" stroke="#2b414c" stroke-width="2"/>
+  <circle cx="20" cy="20" r="4" fill="#ef686f"/>
+  <circle cx="34" cy="20" r="4" fill="#efb958"/>
+  <circle cx="48" cy="20" r="4" fill="#70cf89"/>
+  <text font-family="SFMono-Regular,Consolas,Liberation Mono,monospace" font-size="11" xml:space="preserve">
+    <tspan x="28" y="52" fill="#68d3be"> ARRMAN   ENGINEERING WATCH   14 RUNNING / 16 TOTAL / 0 FLAGGED</tspan>
+    <tspan x="28" y="65" fill="#dae5e7"> HOST 192.168.1.50 │ CPU 18.7% │ LOAD 0.72 │ MEM  46% │ DISK!  92% │ UP 13d 00h 19m</tspan>
+    <tspan x="28" y="78" fill="#dae5e7"> WATCH  DEMO DATA · synthetic state sampled 2s ago</tspan>
+    <tspan x="28" y="91" fill="#dae5e7"> 1 SERVICES   ·   2 INTEGRATIONS   ·   3 DIAGNOSTICS   ·   4 RECOVERY   ·   5 ACTIVITY</tspan>
+    <tspan x="28" y="104" fill="#c7d5d8"></tspan>
+    <tspan x="28" y="117" fill="#c7d5d8">┌ SERVICE WATCH · 16 VISIBLE ─────────────────────────────────────────────────────┐ ┌ INTERLOCK INSPECTOR ─────────────────────────────┐</tspan>
+    <tspan x="28" y="130" fill="#c7d5d8">│  STATE    SERVICE            ROLE               ISS   ENDPOINT                  │ │[READY]   jellyfin                                │</tspan>
+    <tspan x="28" y="143" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="156" fill="#c7d5d8">│  [UP]     audiobookshelf     Audiobook and podc       http://192.168.1.50:8000  │ │ROLE      Media server and streaming              │</tspan>
+    <tspan x="28" y="169" fill="#c7d5d8">│  [UP]     bazarr             Subtitle manager         -                         │ │STATUS    running (healthy)                       │</tspan>
+    <tspan x="28" y="182" fill="#c7d5d8">│  [UP]     flaresolverr       Cloudflare challen       -                         │ │URL       -                                       │</tspan>
+    <tspan x="28" y="195" fill="#c7d5d8">│  [UP]     homarr             Media-server dashb       http://192.168.1.50:8003  │ │IMAGE     ghcr.io/example/jellyfin:latest         │</tspan>
+    <tspan x="28" y="208" fill="#c7d5d8">│▌ [READY]  jellyfin           Media server and s       -                         │ │PORTS     none                                    │</tspan>
+    <tspan x="28" y="221" fill="#c7d5d8">│  [OFF]    jellyseerr         Jellyfin media req       -                         │ │MOUNTS    2                                       │</tspan>
+    <tspan x="28" y="234" fill="#c7d5d8">│  [UP]     lidarr             Music library mana       http://192.168.1.50:8006  │ │HEALTH    declared                                │</tspan>
+    <tspan x="28" y="247" fill="#c7d5d8">│  [READY]  prowlarr           Indexer manager an       -                         │ │INTERLOCK ready                                   │</tspan>
+    <tspan x="28" y="260" fill="#c7d5d8">│  [READY]  radarr             Movie library mana       -                         │ │DEPENDS   none                                    │</tspan>
+    <tspan x="28" y="273" fill="#c7d5d8">│  [READY]  sabnzbd            Usenet downloader        http://192.168.1.50:8009  │ │                                                  │</tspan>
+    <tspan x="28" y="286" fill="#c7d5d8">│  [OFF]    seerr              Media request and        -                         │ │No detected log issues in the current scan.       │</tspan>
+    <tspan x="28" y="299" fill="#c7d5d8">│  [READY]  sonarr             TV series library        -                         │ │                                                  │</tspan>
+    <tspan x="28" y="312" fill="#c7d5d8">│  [READY]  spotweb            Spotweb Usenet ind       http://192.168.1.50:8012  │ │                                                  │</tspan>
+    <tspan x="28" y="325" fill="#c7d5d8">│  [READY]  tracearr           Playback monitorin       -                         │ │                                                  │</tspan>
+    <tspan x="28" y="338" fill="#c7d5d8">│  [UP]     watcharr           Watch tracking and       -                         │ │                                                  │</tspan>
+    <tspan x="28" y="351" fill="#c7d5d8">│  [READY]  wizarr             Jellyfin invite an       http://192.168.1.50:8015  │ │                                                  │</tspan>
+    <tspan x="28" y="364" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="377" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="390" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="403" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="416" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="429" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="442" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="455" fill="#c7d5d8">│                                                                                 │ │                                                  │</tspan>
+    <tspan x="28" y="468" fill="#c7d5d8">└─────────────────────────────────────────────────────────────────────────────────┘ └──────────────────────────────────────────────────┘</tspan>
+    <tspan x="28" y="481" fill="#c7d5d8">┌ LIVE COMMAND CHANNEL ────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐</tspan>
+    <tspan x="28" y="494" fill="#c7d5d8">│17:44:02  Runtime refresh complete · 28 managed services                                                                              │</tspan>
+    <tspan x="28" y="507" fill="#c7d5d8">│17:44:08  Scraparr connectors aligned: sonarr, radarr, prowlarr, bazarr, jellyfin                                                     │</tspan>
+    <tspan x="28" y="520" fill="#c7d5d8">│17:44:11  Tracearr → Jellyfin awaits owner setup                                                                                      │</tspan>
+    <tspan x="28" y="533" fill="#c7d5d8">│                                                                                                                                      │</tspan>
+    <tspan x="28" y="546" fill="#c7d5d8">│                                                                                                                                      │</tspan>
+    <tspan x="28" y="559" fill="#c7d5d8">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</tspan>
+    <tspan x="28" y="572" fill="#c7d5d8">────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</tspan>
+    <tspan x="28" y="585" fill="#c7d5d8">             ↑↓/jk move  / filter  Enter detail  e enable  d disable  R restart  p port  l logs  L scan all  ? help  q quit</tspan>
+  </text>
+</svg>
